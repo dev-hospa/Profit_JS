@@ -40,12 +40,15 @@ function playGame(){
  */
 function displayResult(numberGuess){
     if (numberGuess > correctNumber){
+        clearInputField();
         showNumberAbove();
     } else if(numberGuess < correctNumber){
+        clearInputField();
         showNumberBelow();
     } else {
         showYouWon();
         changeTitle();
+        playSound();
         removeInputField();
         removeButton();
         removeHistory();
@@ -179,4 +182,20 @@ function removeButton(){
 
 function removeHistory(){
     guesses = [];
+}
+
+/**
+ * Clear the input field
+ * and change it's placeholder to "Try again!"
+ */
+function clearInputField(){
+    inputField = document.getElementById("number-guess");
+    inputField.value = "";
+    inputField.setAttribute("placeholder", "Try again!");
+}
+
+function playSound(){
+    sound = document.createElement("audio");
+    sound.setAttribute("src", "cheering.wav");
+    sound.play();
 }
