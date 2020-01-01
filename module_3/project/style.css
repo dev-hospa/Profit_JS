@@ -1,0 +1,29 @@
+table, th, td {
+    border: 2px double black;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-size: 3ex;
+}
+
+th:hover {
+    cursor: hand;
+    cursor: pointer;
+    background-color: grey;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+  }
+
+
+body {
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+}
