@@ -72,7 +72,6 @@ function alignText(elem, alignType){
 function testSwitch(style, buttons, text){
   switch(style){
     case("left"):
-      console.log("left");
       buttons[1].classList.remove("active");
       buttons[2].classList.remove("active");
       if(isActive(buttons[0])){
